@@ -22,8 +22,8 @@
 // === strictly check karta hai -> ye datatype bhi check karta hai
 
 
-console.log("2" == 2) // - true
-console.log("2" === 2) // - false
+// console.log("2" == 2) // - true
+// console.log("2" === 2) // - false
 
 console.log(1 == true);
 console.log(1 === true);
