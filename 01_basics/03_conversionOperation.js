@@ -9,10 +9,10 @@ let score = "adi"
 // console.log(valueInNumber);
 
 // "33" -> 33
-//"33abc" = > NaN
+//"33abc" = > NaN --> not a number
 // true => 1
 
-let isLoggedIn = "vcyg"
+let isLoggedIn = "aditya"
 let booleanIsLoggedIn = Boolean(isLoggedIn)
 // console.log(booleanIsLoggedIn);
 // console.log(isLoggedIn);
@@ -24,14 +24,15 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 let Somenumber = 33
 let stringNumber = String(Somenumber)
 // console.log(typeof stringNumber);
+// console.log(Somenumber);
 
 // ***************** Operations *********************
 let value = 3
 let negValue = -value
-// console.log(negValue);
+console.log(negValue);
 
-// console.log(2+2*2/2);
-// console.log(2**3);
+console.log(2+2*2/2);
+console.log(2**3);
 
 let str1 =  "hello"
 let str2 = " adi"
