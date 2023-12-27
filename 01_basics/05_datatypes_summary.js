@@ -9,7 +9,7 @@ let userEmail;
 
 const id = Symbol('123')
 const anotherId = Symbol('123')
-console.log(id === anotherId);
+// console.log(id === anotherId);
 const bigNumber = 3514236785412314n;
 // console.log(typeof bigNumber);
 
@@ -25,10 +25,10 @@ let myObj ={
 const myFunction = function(){
     console.log("Hello World");
 }
-console.log(typeof outsideTemp);
-console.log(typeof myFunction);
-console.log(typeof myObj);
-console.log(typeof heros);
+// console.log(typeof outsideTemp);
+// console.log(typeof myFunction);
+// console.log(typeof myObj);
+// console.log(typeof heros);
 
 
 
@@ -53,4 +53,28 @@ Return type of variables in JavaScript
        Function  =>  function
        Object  =>  object
 */
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Stack(primitive), Heap(non-primitive/reference)
+let myYoutubeName = "chaiAurCode"
+let anotherName = myYoutubeName
+
+console.log(anotherName);
+anotherName = "raajLeetCode";
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+    email :"user@goole.com",
+    upi: "user@ybl"
+}
+let userTwo = userOne
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+userTwo.email = "raj@google.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
 
