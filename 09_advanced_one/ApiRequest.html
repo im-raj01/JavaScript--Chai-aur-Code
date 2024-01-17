@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    <!-- Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+
+        <div>
+            <p>Aditya raj</p>
+            <span id="insert"></span>
+            <button id="send">Click</button>
+        </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    //before fetch, we are using xmlHttprequest;
+   const xhr = new XMLHttpRequest()
+   xhr.open('GET',requestUrl)
+//    console.log(xhr.readyState);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            // console.log(this.responseText);
+            // const data = this.responseText;
+            // console.log(typeof(data)); // - string, so to convert into object 
+            // we put JSON.parse 
+            const data = JSON.parse(this.responseText);
+            // console.log(typeof(data));
+
+            console.log(data.followers);
+            console.log(data.avatar_url); // photo link dega
+
+            // task:
+            // let insrt = document.querySelector('#insert');
+            let click = document.querySelector('#send');
+
+            function sendData(){
+                let imgelement = document.createElement("img");
+                // set the scr attribute to the url of img
+                imgelement.src = data.avatar_url;
+                let container = document.getElementById("insert");
+                container.appendChild(imgelement);
+                // container.innerHTML = data.followers;
+                
+            }
+            click.addEventListener('click',sendData);
+
+        }
+        
+
+    }
+   xhr.send()
+</script>
+</html>
