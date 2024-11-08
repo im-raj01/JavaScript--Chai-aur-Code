@@ -38,8 +38,8 @@ buttons.forEach( function(button){
     })
 })
 
-```
-### Project2 Solution
+```javascript
+## Project2 Solution
 
 console.log("raj")
 
