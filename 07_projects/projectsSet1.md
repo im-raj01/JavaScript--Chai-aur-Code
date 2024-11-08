@@ -39,3 +39,38 @@ buttons.forEach( function(button){
 })
 
 ```
+### Project2 Solution
+
+console.log("raj")
+
+const form = document.querySelector('form')
+console.log(form)
+form.addEventListener('submit' , function(event){
+  event.preventDefault()
+  const height = parseInt (document.querySelector('#height').value)
+  const weight = parseInt(document.querySelector('#weight').value)
+  // console.log(height)
+  // console.log(weight)
+  const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+  //result show
+  const results = document.querySelector('#results')
+  let textNode;
+  if(bmi < 18.6){
+     textNode = document.createTextNode("you are underWeight")
+  }
+  else if(bmi > 18.6 && bmi <25){
+     textNode = document.createTextNode("you are NormalWeight")
+  }
+  else{
+     textNode = document.createTextNode("you are OverWeight")
+  }
+  results.innerHTML = bmi;
+  const div = document.createElement('div');
+  div.append(textNode)
+  results.appendChild(div)
+
+
+
+})
+
+```
